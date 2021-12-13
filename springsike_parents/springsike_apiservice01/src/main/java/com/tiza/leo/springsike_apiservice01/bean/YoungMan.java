@@ -30,7 +30,7 @@ public class YoungMan {
         BeautifulGirl beautifulGirl = new BeautifulGirl();
 
         //你有女友了
-        //youngMan.setBeautifulGirl(beautifulGirl);
+        youngMan.setBeautifulGirl(beautifulGirl);
         System.out.println(youngMan.getBeautifulGirl().getCreateType());
 
     }
