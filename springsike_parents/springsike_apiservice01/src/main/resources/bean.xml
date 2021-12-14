@@ -5,5 +5,23 @@
 
     <bean id="youngMan" class="com.tiza.leo.springsike_apiservice01.bean.YoungMan"></bean>
 
+    <bean id="hongqi" class="com.tiza.leo.springsike_apiservice01.beanCar.Hongqi">
 
+    </bean>
+    <bean id="bmw" class="com.tiza.leo.springsike_apiservice01.beanCar.Bmw">
+
+    </bean>
+
+    <bean id="display" class="com.tiza.leo.springsike_apiservice01.beanCar.Display">
+        <lookup-method name="getCar" bean="bmw"></lookup-method>
+    </bean>
+
+
+    <bean id="method" class="com.tiza.leo.springsike_apiservice01.beanReplace.Method">
+        <replaced-method name="display" replacer="methodReplace"></replaced-method>
+    </bean>
+
+    <bean id="methodReplace" class="com.tiza.leo.springsike_apiservice01.beanReplace.MethodReplace">
+
+    </bean>
 </beans>
