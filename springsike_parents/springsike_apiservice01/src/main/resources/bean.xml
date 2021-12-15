@@ -24,4 +24,20 @@
     <bean id="methodReplace" class="com.tiza.leo.springsike_apiservice01.beanReplace.MethodReplace">
 
     </bean>
+
+  <!--  //  bookService   11/43
+    https://www.cmsblogs.com/article/1391375344744927232-->
+
+    <bean id="bookService" class="com.tiza.leo.springsike_apiservice01.beanStudent.BookService">
+
+    </bean>
+
+    <bean id="studentService" class="com.tiza.leo.springsike_apiservice01.beanStudent.StudentService">
+        <constructor-arg index="0" value="leo"></constructor-arg>
+        <constructor-arg name="age" value="22"></constructor-arg>
+        <constructor-arg name="bookService" ref="bookService"/>
+    </bean>
+
+
+
 </beans>
