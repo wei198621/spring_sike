@@ -60,4 +60,44 @@
         <property name="name" value="leo wei 01"/>
     </bean>
 
+    <bean id="studentService2" class="com.tiza.leo.springsike_apiservice01.beanFactoryPostProcessor.StudentService2">
+        <property name="name" value="weilei"/>
+        <property name="age" value="35"/>
+    </bean>
+
+    <bean class="com.tiza.leo.springsike_apiservice01.beanFactoryPostProcessor.BeanFactoryPostProcessor_1">
+    </bean>
+    <bean class="com.tiza.leo.springsike_apiservice01.beanFactoryPostProcessor.BeanFactoryPostProcessor_2"/>
+
+
+    <bean id="PropertyPlaceholderConfigurer" class="com.tiza.leo.springsike_apiservice01.beanFactoryPostProcessor.CustomPropertyConfig">
+        <property name="locations">
+            <list>
+                <value>classpath:application-dev.properties</value>
+                <value>classpath:application-test.properties</value>
+                <value>classpath:application-prod.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="studentService3" class="com.tiza.leo.springsike_apiservice01.beanFactoryPostProcessor.StudentService2">
+        <property name="name" value="${student.name}"/>
+    </bean>
+
+
+    <bean id="student" class="com.tiza.leo.springsike_apiservice01.beanFactoryPostProcessor.StudentService2">
+        <property name="name" value="leowei"/>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.PropertyOverrideConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:application.properties</value>
+            </list>
+        </property>
+    </bean>
+
+
+
+
 </beans>
