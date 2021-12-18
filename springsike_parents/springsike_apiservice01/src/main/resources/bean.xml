@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-init-method="initBean"
+>
 
     <bean id="youngMan" class="com.tiza.leo.springsike_apiservice01.bean.YoungMan"></bean>
 
@@ -38,6 +40,24 @@
         <constructor-arg name="bookService" ref="bookService"/>
     </bean>
 
+    <bean id="myApplicationAware" class="com.tiza.leo.springsike_apiservice01.aware.MyApplicationAware" >
 
+    </bean>
+
+
+    <bean id="beanPostProcessorTest" class="com.tiza.leo.springsike_apiservice01.beanPostProcessor.BeanPostProcessorTest">
+
+    </bean>
+
+    <bean id="initializingBeanTest" class="com.tiza.leo.springsike_apiservice01.initializingBean.initializingBeanTest">
+        <property name="name" value="leo wei 01"></property>
+    </bean>
+
+    <bean id="initializingBean2Test"
+          class="com.tiza.leo.springsike_apiservice01.initializingBean.InitializingBean2Test"
+          init-method="setOtherName"
+    >
+        <property name="name" value="leo wei 01"/>
+    </bean>
 
 </beans>
